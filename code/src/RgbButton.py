@@ -43,10 +43,10 @@ class RgbButton:
             ):
             self.assignRandomColor()
 
-    def assignColor(self, redColor, blueColor, greenColor):
-        self.ledPinRed.value(redColor)
-        self.ledPinBlue.value(blueColor)
-        self.ledPinGreen.value(greenColor)
+    def assignColor(self, red, blue, green):
+        self.ledPinRed.value(0 if red else 1)
+        self.ledPinBlue.value(0 if blue else 1)
+        self.ledPinGreen.value(0 if green else 1)
 
     def turnOffLight(self):
         self.ledPinRed.value(1)
